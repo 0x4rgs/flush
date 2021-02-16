@@ -15,7 +15,6 @@ import (
 
 func main() {
 
-	// ENV_LOCAL : carregando variáveis de ambiente à partir do arquivo local ENV_LOCAL.
 	err := godotenv.Load("ENV_LOCAL")
 
 	if err != nil {
@@ -24,12 +23,10 @@ func main() {
 
 	logpath := os.Getenv("LOG_PATH")
 
-	// TIME : obtendo hora e data no formato YYYY-MM-DD hh:mm:ss.
 	currentTime := time.Now()
 	timestamp := currentTime.Format("2006-01-02 15:04:05")
 	fmt.Println(timestamp)
 
-	// READ : buffer e laço para streaming.
 	file, err := os.Open(logpath)
 	if err != nil {
 		log.Fatal("Error => ", err)
@@ -42,7 +39,6 @@ func main() {
 		line = append(line, scanner.Text())
 	}
 
-	// FOR : Loop que que permanecerá em execução enquanto o arquivo de log existir.
 	for _, err := os.Stat(logpath); !os.IsNotExist(err); {
 		for _, eachline := range line {
 			reqBody, err := json.Marshal(map[string]string{
