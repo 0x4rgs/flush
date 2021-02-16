@@ -5,7 +5,7 @@ Flush Go é um streamer capaz de enviar os logs do sistema operacional para o El
 
 ```bash
 # Baixar o repositório
-git clone https://github.com/0x4rgs/teste.git
+git clone https://github.com/0x4rgs/flush.git
 ```
 
 ```bash
