@@ -9,6 +9,11 @@ git clone https://github.com/0x4rgs/flush.git
 ```
 
 ```bash
+# Ajustes no Linux/Mac
+ulimit -n 99999
+```
+
+```bash
 # Instalar dependências
 go get github.com/joho/godotenv
 ```
