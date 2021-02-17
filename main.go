@@ -13,6 +13,7 @@ import (
 	"github.com/joho/godotenv"
 )
 
+
 func main() {
 
 	err := godotenv.Load("ENV_LOCAL")
@@ -48,7 +49,7 @@ func main() {
 			if err != nil {
 				log.Fatal("Error => ", err)
 			}
-			res, err := http.Post("http://localhost:9200/golang/golang", "application/json", bytes.NewBuffer(reqBody))
+			res, err := http.Post("http://localhost:9200/golang/_doc", "application/json", bytes.NewBuffer(reqBody))
 			if err != nil {
 				log.Fatal("Error => ", err)
 			}

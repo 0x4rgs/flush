@@ -1,3 +1,4 @@
 # .ENV : Configuração e dados de acesso à aplicação.
 
 LOG_PATH=/var/log/syslog
+
