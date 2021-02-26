@@ -45,10 +45,6 @@ $ go run main.go
 http://localhost:5601
 ```
 
-## Observações
-
-Dependendo da quantidade de dados contidos no arquivo de log configurado o elasticsearch em execução com docker não suportará o volume de requisições.
-
 ## Dúvidas e Sugestões
 
 0x4rgs@protonmail.com
